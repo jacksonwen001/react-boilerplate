@@ -1,7 +1,9 @@
 node_modules/
 dist/
-.prettierrc.js
+.prettierrc.cjs
 .eslintrc.cjs
 .stylelintrc.cjs
-commitlint.config.js
+commitlint.config.cjs
+tailwind.config.cjs
+postcss.config.cjs
 env.d.ts

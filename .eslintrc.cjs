@@ -3,7 +3,7 @@ module.exports = {
     // By extending from a plugin config, we can get recommended rules without having to add them manually.
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:import/recommended',
+    // 'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
     // This disables the formatting rules in ESLint that Prettier is going to be responsible for handling.
@@ -25,6 +25,6 @@ module.exports = {
   },
   rules: {
     // Add your own rules here to override ones from the extended configs.
-    "react/react-in-jsx-scope": "off",
+    'react/react-in-jsx-scope': 'off',
   },
-}
+};

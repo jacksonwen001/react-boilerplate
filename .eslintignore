@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.prettierrc.js
+.eslintrc.cjs
+.stylelintrc.cjs
+commitlint.config.cjs
+env.d.ts

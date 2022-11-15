@@ -3,5 +3,5 @@ dist/
 .prettierrc.js
 .eslintrc.cjs
 .stylelintrc.cjs
-commitlint.config.cjs
+commitlint.config.js
 env.d.ts

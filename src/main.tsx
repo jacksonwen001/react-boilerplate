@@ -1,13 +1,21 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import { worker } from '@/mock';
+import { AuthProvider } from '@/auth/auth';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+async function start() {
+  if (import.meta.env.VITE_PROJECT_ENV === 'dev') {
+    await worker.start({ onUnhandledRequest: 'bypass' });
+  }
+  ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-);
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>,
+  );
+}
+
+start();
